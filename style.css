@@ -30,7 +30,6 @@ body{
     display: flex;
     flex-direction: column;
     gap: 40px;
-    margin-right: 50px;
 }
 
 .apresentacao__conteudo__titulo{
@@ -47,7 +46,6 @@ body{
 .apresentacao__links{
     display: flex;
     justify-content: space-between;
-    gap: 50px;
 }
 
 .apresentacao__links__botao{
