@@ -1,0 +1,62 @@
+<!--<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <title>Porfolio Paola</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            background-color: blueviolet;
+            padding: 15px;
+            text-align: center;
+        }
+        main{
+            text-align: center;
+        }
+        .texto-destaque{
+            background-color: blueviolet;
+            color: white;
+        }
+        .titulo-blog{
+            color: white;
+        }
+        .urgente{
+            color: red;
+        }
+        a {
+            color: blueviolet;
+            border: none;
+        }
+        a:houver{
+            color:white
+        }
+        footer{
+            background-color: aquamarine;
+            padding: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><strong class="titulo-blog">Analista de Desenvolvimento</strong></h1>
+        <h2 class="titulo-blog">Paola Yêda</h2>
+    </header>
+    <main>
+        <p> <strong class="urgente"> Seja bem vindo a minha <span class="texto-destaque">primeira</span> página</strong> </p>
+        <img src="Imagem.png" alt="Foto da Paola Yêda programando">
+        
+    </main>
+</body>
+<footer>
+    <a href="https://www.instagram.com/payes__s/">Instagram</a>
+    <a href="https://github.com/pygaudiello">Github</a></footer>
+</html>
+
+
+
+
+    -->
+
