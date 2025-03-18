@@ -4,8 +4,15 @@
 }
 
 body{
+    height: 100vh;
+    box-sizing: border-box;
     background-color: black;
     color: #F6F6F6;
+}
+
+.apresentacao{
+    display: flex;
+    align-items: center;
 }
 
 .titulo-destaque{

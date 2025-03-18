@@ -1,4 +1,4 @@
-<!--<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt">
 <head>
     <title>Porfolio Paola</title>
@@ -7,13 +7,24 @@
             margin: 0;
             padding: 0;
         }
+        body{
+            height: 100vh;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+        }
         header{
             background-color: blueviolet;
             padding: 15px;
             text-align: center;
         }
         main{
+            flex: 1;
+            display: flex;
+            align-items: center;
             text-align: center;
+            justify-content: space-between;
+            padding: 0 15px;
         }
         .texto-destaque{
             background-color: blueviolet;
@@ -22,12 +33,23 @@
         .titulo-blog{
             color: white;
         }
+        .texto{
+            display: flex;
+            justify-content: start;
+        }
+        .imagem{
+            display: flex;
+            justify-content: end;
+            max-width: 100%;
+            height: auto;
+        }
         .urgente{
             color: red;
         }
         a {
             color: blueviolet;
             border: none;
+            margin: 0 10px;
         }
         a:houver{
             color:white
@@ -37,6 +59,19 @@
             padding: 15px;
             text-align: center;
         }
+
+        @media (max-width: 600px){
+            main {
+                flex-direction: column;
+                text-align: center;
+            }
+            .imagem{
+                margin: 15px;
+            }
+            .texto{
+                margin-top: 15px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -45,8 +80,8 @@
         <h2 class="titulo-blog">Paola Yêda</h2>
     </header>
     <main>
-        <p> <strong class="urgente"> Seja bem vindo a minha <span class="texto-destaque">primeira</span> página</strong> </p>
-        <img src="Imagem.png" alt="Foto da Paola Yêda programando">
+        <p class="texto"> <strong class="urgente"> Seja bem vindo a minha <span class="texto-destaque">primeira</span> página</strong> </p>
+        <img class="imagem" src="Imagem.png" alt="Foto da Paola Yêda programando">
         
     </main>
 </body>
@@ -54,9 +89,3 @@
     <a href="https://www.instagram.com/payes__s/">Instagram</a>
     <a href="https://github.com/pygaudiello">Github</a></footer>
 </html>
-
-
-
-
-    -->
-
