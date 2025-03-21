@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Telefonix - Associações</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F9F5EB;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        header.navbar {
+            background-color: #002B5B;
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .dashboard {
+            text-align: center;
+            padding: 20px;
+        }
+        .drag-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+        }
+        .clientes-list, .planos-list {
+            width: 45%;
+            padding: 20px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+        .clientes-list .cliente {
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            background-color: #f2f2f2;
+            border-radius: 5px;
+        }
+        .cliente .planos-container {
+            min-height: 50px;
+            padding: 10px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        .planos-list .plano, .cliente .plano {
+            padding: 10px;
+            background-color: #EA5455;
+            color: white;
+            border-radius: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        header.navbar {
+            background-color: #002B5B;
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .menu a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .menu {
+            display: flex;
+            gap: 25px;
+            margin-top: 10px;
+        }
+        .menu button {
+            background-color: transparent;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            color: white;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .menu button:hover,
+        .menu button.active {
+            background-color: #EA5455;
+        }
+        .menu button:focus {
+            outline: none;
+        }
+        .navbar-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        .logo {
+            background-color: #8986b3;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 22px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .trash {
+            width: 100%;
+            text-align: center;
+            padding: 15px;
+            margin-top: 10px;
+            border: 1px dashed red;
+            background-color: #ffe6e6;
+            color: red;
+            font-weight: bold;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 24px;
+            color: #002B5B;
+        }
+        .header p {
+            font-size: 16px;
+            color: #666;
+            margin-top: 5px;
+        }
+        .clientes-list {
+            width: 45%;
+            padding: 20px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            border-radius: 5px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        footer {
+            background-color: #E4DCCF;
+            padding: 20px 0;
+            text-align: center;
+            color: #002B5B;
+            font-size: 12px;
+            width: 100%;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar-content">
+            <div class="logo">Telefonix</div>
+            <div class="menu">
+                <button><a href="index2.html">Dashboard</a></button>
+                <button><a href="tela2.html">Planos</a></button>
+                <button><a href="tela3.html">Clientes</a></button>
+                <button class="active">Associações</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard">
+        <div class="header">
+            <h1>Associação de Clientes a Planos</h1>
+            <p>Aqui você associa os planos aos clientes</p>
+        </div>
+        <div class="drag-container">
+            <div class="clientes-list" id="clientes">
+                <h3>Clientes</h3>
+                <div class="cliente" id="cliente1">João Silva
+                    <div class="planos-container" ondrop="drop(event, this)" ondragover="allowDrop(event)"></div>
+                </div>
+                <div class="cliente" id="cliente2">Maria Oliveira
+                    <div class="planos-container" ondrop="drop(event, this)" ondragover="allowDrop(event)"></div>
+                </div>
+                <div class="cliente" id="cliente3">Carlos Souza
+                    <div class="planos-container" ondrop="drop(event, this)" ondragover="allowDrop(event)"></div>
+                </div>
+                <div class="cliente" id="cliente4">Fernanda Costa
+                    <div class="planos-container" ondrop="drop(event, this)" ondragover="allowDrop(event)"></div>
+                </div>
+                <div class="cliente" id="cliente5">Roberto Lima
+                    <div class="planos-container" ondrop="drop(event, this)" ondragover="allowDrop(event)"></div>
+                </div>
+                <div class="cliente" id="cliente6">Luciana Pereira
+                    <div class="planos-container" ondrop="drop(event, this)" ondragover="allowDrop(event)"></div>
+                </div>
+                <div class="cliente" id="cliente7">Ricardo Gomes
+                    <div class="planos-container" ondrop="drop(event, this)" ondragover="allowDrop(event)"></div>
+                </div>
+                <div class="cliente" id="cliente8">Beatriz Souza
+                    <div class="planos-container" ondrop="drop(event, this)" ondragover="allowDrop(event)"></div>
+                </div>
+                <div class="cliente" id="cliente9">Paulo Costa
+                    <div class="planos-container" ondrop="drop(event, this)" ondragover="allowDrop(event)"></div>
+                </div>
+                <div class="cliente" id="cliente10">Tatiane Santos
+                    <div class="planos-container" ondrop="drop(event, this)" ondragover="allowDrop(event)"></div>
+                </div>
+                <div class="cliente" id="cliente11">Lucas Almeida
+                    <div class="planos-container" ondrop="drop(event, this)" ondragover="allowDrop(event)"></div>
+                </div>
+                <div class="cliente" id="cliente12">Juliana Ferreira
+                    <div class="planos-container" ondrop="drop(event, this)" ondragover="allowDrop(event)"></div>
+                </div>
+                <div class="cliente" id="cliente13">Eduardo Martins
+                    <div class="planos-container" ondrop="drop(event, this)" ondragover="allowDrop(event)"></div>
+                </div>
+                <div class="cliente" id="cliente14">Tatiane Costa
+                    <div class="planos-container" ondrop="drop(event, this)" ondragover="allowDrop(event)"></div>
+                </div>
+                <div class="cliente" id="cliente15">Gustavo Oliveira
+                    <div class="planos-container" ondrop="drop(event, this)" ondragover="allowDrop(event)"></div>
+                </div>
+                <div class="cliente" id="cliente16">Renata Silva
+                    <div class="planos-container" ondrop="drop(event, this)" ondragover="allowDrop(event)"></div>
+                </div>
+                <div class="cliente" id="cliente17">Thiago Rodrigues
+                    <div class="planos-container" ondrop="drop(event, this)" ondragover="allowDrop(event)"></div>
+                </div>
+                <div class="cliente" id="cliente18">Camila Pereira
+                    <div class="planos-container" ondrop="drop(event, this)" ondragover="allowDrop(event)"></div>
+                </div>
+                <div class="cliente" id="cliente19">Leandro Souza
+                    <div class="planos-container" ondrop="drop(event, this)" ondragover="allowDrop(event)"></div>
+                </div>
+                <div class="cliente" id="cliente20">Juliana Lima
+                    <div class="planos-container" ondrop="drop(event, this)" ondragover="allowDrop(event)"></div>
+                </div>
+            </div>
+            <div class="planos-list">
+                <h3>Planos Disponíveis</h3>
+                <div class="plano" id="plano1" draggable="true" ondragstart="drag(event)">Plano Básico</div>
+                <div class="plano" id="plano2" draggable="true" ondragstart="drag(event)">Plano Pro</div>
+                <div class="plano" id="plano3" draggable="true" ondragstart="drag(event)">Plano Master</div>
+                <div class="plano" id="plano4" draggable="true" ondragstart="drag(event)">Plano Gold</div>
+                <div class="plano" id="plano5" draggable="true" ondragstart="drag(event)">Plano Vip</div>
+            </div>
+        </div>
+        <div class="trash" ondrop="removePlan(event)" ondragover="allowDrop(event)">Arraste aqui para remover</div>
+    </main>
+
+    <footer>
+        Made By: Paola Yêda
+    </footer>
+
+    <script>
+        function allowDrop(event) {
+            event.preventDefault();
+        }
+        
+        function drag(event) {
+            event.dataTransfer.setData("text", event.target.id);
+        }
+        
+        function drop(event, target) {
+            event.preventDefault();
+            const planId = event.dataTransfer.getData("text");
+            const originalPlan = document.getElementById(planId);
+
+            if (originalPlan) {
+                const newPlan = originalPlan.cloneNode(true);
+                newPlan.id = `copy-${planId}-${Date.now()}`;
+                newPlan.ondragstart = drag;
+                target.appendChild(newPlan);
+            }
+        }
+        
+        function removePlan(event) {
+            event.preventDefault();
+            const planId = event.dataTransfer.getData("text");
+            const planElement = document.getElementById(planId);
+
+            if (planElement && planElement.id.startsWith("copy-")) {
+                planElement.remove();
+            }
+        }
+    </script>
+</body>
+</html>
