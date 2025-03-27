@@ -1,13 +1,15 @@
-# HTML-CSS
-Todos os meus Projetos em HTML e CSS
+# Front-End
+Todos os meus Projetos de Front-End Desenvolvidos.
 
 ### Projeto 1: Uma tela de apresentação simples
 Esse projeto consiste em uma tela de apresentação para trabalhar mais os conceitos de design em CSS.
+Neste projeto utilizei HTML e CSS.
 
 ![image](https://github.com/user-attachments/assets/6f858ed0-8e9b-460c-8227-c1645b162ebf)
 
 ### Projeto 2: Sistema de Gestão de Planos de telefonia com Dashboard
 Este projeto consiste em um sistema de gerenciamento de planos contratados por clientes, onde cada cliente pode ter um ou mais planos associados. O sistema também permite consultar informações sobre planos e clientes, com a estrutura e a arquitetura planejadas para serem escaláveis e de fácil manutenção.
+Neste projeto utilizei HTML, CSS, JS e criei uma Api para Mock em json.
 
 Assista o vídeo do dashboard funcionando no Youtube: Clique [aqui](https://youtu.be/yvrJsEHyhak)
 
